@@ -29,7 +29,7 @@ int test_draw_text_to_uyvy() {
     int loop = 10000;
     gettimeofday(&start_time, NULL);
     for (int i = 0;i < loop;i++) {
-        YUV_TEXT_DRAW.add_text_to_uyvy(src_img, pic_w, pic_h, L"Smoke Alarm!", 100, 100, 500, 100);
+        YUV_TEXT_DRAW.add_text_to_uyvy(src_img, pic_w, pic_h, L"Smoke Alarm(抽烟警告)!", 100, 100, 1000, 100);
     }
     gettimeofday(&end_time, NULL);
     double time_used = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
@@ -70,7 +70,7 @@ int test_draw_text_to_yuyv() {
     int loop = 10000;
     gettimeofday(&start_time, NULL);
     for (int i = 0;i < loop;i++) {
-        YUV_TEXT_DRAW.add_text_to_yuyv(src_img, pic_w, pic_h, L"Smoke Alarm!", 100, 100, 500, 100);
+        YUV_TEXT_DRAW.add_text_to_yuyv(src_img, pic_w, pic_h, L"Smoke Alarm(抽烟警告)!", 100, 100, 1000, 100);
     }
     gettimeofday(&end_time, NULL);
     double time_used = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
@@ -90,6 +90,6 @@ int main() {
     }
     test_draw_text_to_uyvy();
     test_draw_text_to_yuyv();
-    
+
     return 0;
 }
